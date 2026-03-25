@@ -1,0 +1,12 @@
+﻿Timestamp,Phase,Event Description,Action Taken
+18:53:05,Pre-Incident,Admin (kini) created user account vic (UID 1005).,useradd -m vic executed.
+18:53:29,Pre-Incident,Initial password set for user vic.,passwd vic executed.
+18:54:08,Incursion,Failed SSH login attempt detected from IP 192.168.1.14.,Logged in auth.log (SSH).
+18:54:14,Incursion,2nd Failed SSH login attempt from 192.168.1.14.,Logged in auth.log.
+18:54:19,Incursion,3rd Failed SSH login attempt from 192.168.1.14.,Logged in auth.log (Brute Force Pattern).
+18:54:25,Compromise,Successful SSH login for user vic from 192.168.1.14.,Attacker gained shell access (Session 37).
+18:56:36,Identification,Admin (kini) accesses vic account locally to investigate.,su vic executed on pts/0.
+18:58:11,Containment,Attacker's SSH session (Session 37) was terminated.,Session closed / disconnected.
+18:58:33,Eradication,Admin (root) forced a password change for vic.,passwd vic executed (Credentials Reset).
+18:58:46,Recovery,Failed login attempt from 192.168.1.14.,Attacker attempted to reconnect but was blocked by new password.
+18:59:39,Recovery,Final password update/reset by admin.,Account secured.

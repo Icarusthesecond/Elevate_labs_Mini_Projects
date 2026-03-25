@@ -1,0 +1,13 @@
+=== Intrusion Detection Report ===
+
+Brute Force:
+192.168.1.10 → 4 failed attempts
+
+DoS Detection:
+192.168.1.20 → 6 requests
+
+Blacklisted IPs:
+192.168.1.10 detected
+192.168.1.10 detected
+192.168.1.10 detected
+192.168.1.10 detected

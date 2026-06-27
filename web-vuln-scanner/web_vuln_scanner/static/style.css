@@ -1,0 +1,181 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Card */
+.container {
+    background: #111827;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #9ca3af;
+    margin-bottom: 25px;
+}
+
+/* Input */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* Button */
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #1f2933;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #374151;
+}
+
+/* URL & Payload styling */
+.url {
+    color: #93c5fd;
+    font-size: 13px;
+}
+
+.payload {
+    color: #fca5a5;
+    font-size: 13px;
+}
+
+/* Severity badges */
+.severity {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.severity.high {
+    background: #dc2626;
+}
+
+.severity.medium {
+    background: #f59e0b;
+}
+
+.severity.low {
+    background: #16a34a;
+}
+
+/* Safe Box */
+.safe-box {
+    background: #14532d;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background: #374151;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #4b5563;
+}
+.summary {
+    text-align: left;
+    margin: 15px 0;
+    color: #d1d5db;
+}
+
+.summary li {
+    margin: 5px 0;
+}
+.summary-box {
+    background: #1f2933;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.summary {
+    list-style: none;
+    padding: 0;
+    color: #d1d5db;
+}
+
+.summary li {
+    margin: 6px 0;
+}
+
+.safe-box {
+    background: #14532d;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}

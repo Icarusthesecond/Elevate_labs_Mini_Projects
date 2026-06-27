@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CTI Dashboard</title>
+<style>
+body {
+    font-family: Arial;
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+}
+
+input, button {
+    padding: 8px;
+    margin: 5px;
+}
+
+h2 {
+    color: #38bdf8;
+}
+</style>
+</head>
+<body>
+    <h2>🛡️ Cyber Threat Intelligence Dashboard</h2>
+
+    <form method="POST">
+        <input type="text" name="ip" placeholder="Enter IP Address" required>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <h3>Results:</h3>
+        <p><b>IP:</b> {{ result.ipAddress }}</p>
+        <p><b>Threat Score:</b> {{ result.abuseConfidenceScore }}</p>
+        <p><b>Country:</b> {{ result.countryCode }}</p>
+        <p><b>Total Reports:</b> {{ result.totalReports }}</p>
+
+        <img src="{{ url_for('static', filename='chart.png') }}" width="400">
+    {% endif %}
+
+</body>
+</html>

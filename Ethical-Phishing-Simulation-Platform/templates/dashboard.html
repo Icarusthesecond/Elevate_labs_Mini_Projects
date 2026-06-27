@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phishing Simulator Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Ethical Phishing Simulation Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Total Clicks</h2>
+<p>{{ clicks }}</p>
+</div>
+
+<div class="card">
+<h2>Credentials Entered</h2>
+<p>{{ creds }}</p>
+</div>
+
+</div>
+
+<div class="chart-box">
+<canvas id="chart"></canvas>
+</div>
+
+<div class="launch">
+<a class="launch-btn" href="/phish">Launch Test Phishing Page</a>
+</div>
+
+</div>
+
+<script>
+
+var ctx = document.getElementById('chart');
+
+new Chart(ctx,{
+type:'bar',
+data:{
+labels:['Clicks','Credentials'],
+datasets:[{
+label:'Campaign Analytics',
+data:[{{clicks}},{{creds}}],
+backgroundColor:['#ff9800','#ff5252']
+}]
+},
+options:{
+responsive:true,
+plugins:{
+legend:{labels:{color:'white'}}
+},
+scales:{
+y:{ticks:{color:'white'}},
+x:{ticks:{color:'white'}}
+}
+}
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SQL Injection Lab</title>
+<style>
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+input {
+    padding: 12px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 12px;
+    width: 150px;
+    background: cyan;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.msg {
+    margin-top: 20px;
+    font-size: 18px;
+    color: yellow;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>SQL Injection Playground</h1>
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <button>Login</button>
+    </form>
+
+    <div class="msg">{{msg}}</div>
+</div>
+
+</body>
+</html>

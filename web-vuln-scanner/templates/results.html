@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>📊 Scan Results</h1>
+    <p class="subtitle">Target: <strong>{{ url }}</strong></p>
+
+    {% if success %}
+    <div class="success-box">
+        ✅ Report Generated Successfully
+    </div>
+    {% endif %}
+
+    <div class="summary-box">
+        <h2>📈 Scan Summary</h2>
+        <ul class="summary">
+            <li><strong>Total Pages Crawled:</strong> {{ summary.total_pages }}</li>
+            <li><strong>Total Vulnerabilities:</strong> {{ summary.total_vulns }}</li>
+            <li><strong>Scan Duration:</strong> {{ summary.scan_time }}</li>
+        </ul>
+    </div>
+
+    {% if results %}
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>URL</th>
+            <th>Severity</th>
+            <th>Evidence</th>
+            <th>Recommendation</th>
+        </tr>
+
+        {% for vuln in results %}
+        <tr>
+            <td>{{ vuln.type }}</td>
+            <td class="url">{{ vuln.url }}</td>
+            <td>
+                <span class="severity {{ vuln.severity | lower }}">
+                    {{ vuln.severity }}
+                </span>
+            </td>
+            <td>{{ vuln.evidence }}</td>
+            <td>{{ vuln.recommendation }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <div class="safe-box">
+        ✅ No vulnerabilities detected
+    </div>
+    {% endif %}
+
+    {% if pdf_file %}
+    <a href="/static/{{ pdf_file }}" class="download-btn">
+        📄 Download PDF Report
+    </a>
+    {% endif %}
+
+    <a href="/" class="back-btn">⬅ Start New Scan</a>
+</div>
+
+</body>
+</html>

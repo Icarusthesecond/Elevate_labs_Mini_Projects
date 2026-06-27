@@ -69,7 +69,7 @@ python3 app.py
 ✔️ Real-world cybersecurity implementations ✔️ Hands-on security tools and simulations ✔️ Visualization of threats and logs ✔️ Encryption and secure communication ✔️ Network monitoring and intrusion detection
 
 👩‍💻 Author
-Indu Shree Cybersecurity Enthusiast | MSc Cybersecurity
+Nishanth C | Cybersecurity Enthusiast | MSc Cybersecurity
 
 ⭐ Acknowledgment
 This portfolio represents my learning journey in cybersecurity and showcases my practical understanding of security concepts.
